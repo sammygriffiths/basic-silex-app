@@ -4,15 +4,15 @@ namespace Griff;
 
 use Symfony\Component\HttpFoundation\Request;
 
-class CoreController
+class Core_Controller
 {
     protected $model;
 
     public function __construct() {
-        $this->setModel();
+        $this->set_model();
     }
 
-    private function setModel() {
+    private function set_model() {
         $model = str_replace('Controller', 'Model', get_class($this));
         $this->model = new $model;
     }

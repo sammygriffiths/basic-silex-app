@@ -14,7 +14,7 @@ $app->get('/{route}', function (Request $request, $route) use ($app) {
 
     $variables = $route;
 
-    $controller = 'Griff\\'.$controller."Controller";
+    $controller = 'Griff\\'.$controller."_Controller";
     $controller = new $controller($request, $app, ...$variables);
 
     return $controller->$method();
