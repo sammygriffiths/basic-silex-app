@@ -2,7 +2,7 @@
 
 namespace Griff;
 
-class CoreModel
+class Core_Model
 {
 
     public function __construct() {

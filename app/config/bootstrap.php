@@ -7,9 +7,9 @@ $app = new Griff\Application;
 $app['debug'] = true;
 error_reporting(E_ALL);
 
-$viewsPaths = glob(__DIR__.'/../views/{,**/}', GLOB_BRACE);
+$views_paths = glob(__DIR__.'/../views/{,**/}', GLOB_BRACE);
 
 $app->register(new Silex\Provider\TwigServiceProvider(), array(
-    'twig.path' => $viewsPaths,
+    'twig.path' => $views_paths,
 ));
 
