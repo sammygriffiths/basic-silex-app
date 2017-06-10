@@ -2,7 +2,7 @@
 
 require_once __DIR__.'/../app/config/bootstrap.php';
 
-$app->get('/{route}', function (Request $request, $route) use ($app) {
+$app->get('/{route}', function (\Symfony\Component\HttpFoundation\Request $request, $route) use ($app) {
     $route = explode('/', $route);
 
     $controller = (!empty($route[0])) ? $route[0] : 'dashboard';

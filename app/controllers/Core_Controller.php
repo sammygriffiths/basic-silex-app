@@ -7,9 +7,13 @@ use Symfony\Component\HttpFoundation\Request;
 class Core_Controller
 {
     protected $model;
+    protected $request;
+    protected $app;
 
-    public function __construct() {
+    public function __construct(Request $request, Application &$app) {
         $this->set_model();
+        $this->request = $request;
+        $this->app = $app;
     }
 
     private function set_model() {
